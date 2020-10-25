@@ -1,0 +1,37 @@
+<table border="0" width="90%" cellspacing="1" cellpadding="1" align="center">
+<!-- Línea del título de sección -->
+<tr>
+<td colspan="2">
+<span style="float: right; width: 110px; height: 24px; margin: 0;">
+<img src="<{$xoops_url}>/modules/wfquotes/images/sec_quotes.gif" border="0" width="110" height="24">
+</span>
+</td>
+</tr>
+
+<tr> 
+	<td align="left" class="quotext"> 
+		<div align="left"><{$lang_articleheading}></div>
+	</td>
+</tr>
+
+<tr> 
+	<td align="left"> 
+		<div align="left">
+			<h4><{$lang_indextext}></h4>
+		</div>
+	</td>
+</tr>
+  <tr> 
+    <td align="left">&nbsp;</td>
+  </tr>
+</table>
+<table border="0" width="90%" cellspacing="1" cellpadding="0" align="center">
+  <{foreach item=indexpage from=$indexpage}>
+  <tr>
+		<td>
+			<div style="display:block; font-size:14px; font-weight: bold; color: #cc0000;"><a href="index.php?op=cat&c=<{$indexpage.id}>"><b><{$indexpage.category}></b></a></div>
+			<div style="display:block; font-size:11px; font-weight: normal; margin-bottom: 9px;">[<{$indexpage.total}>]&nbsp;<{$indexpage.description}></div>
+		</td>
+  </tr>
+	<{/foreach}>
+</table>

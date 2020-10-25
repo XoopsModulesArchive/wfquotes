@@ -1,0 +1,52 @@
+<table border="0" width="90%" cellspacing="1" cellpadding="2" align="center">
+
+<tr>
+<td colspan="2">
+<span style="float: right; width: 110px; height: 24px; margin: 0;">
+<a href="<{$xoops_url}>/modules/wfquotes/">
+<img src="<{$xoops_url}>/modules/wfquotes/images/sec_quotes.gif" border="0" width="110" height="24">
+</a>
+</span>
+</td>
+</tr>
+<tr>
+	<td>
+		<p><{$quotepage.adminlink}></p>
+		<p><{$lang_articleheading}><br>
+		<span style="padding-left: 36px;">--<{$quotepage.author}><span><br>
+		<div style="font-size: 10px; padding-left: 36px; font-style: italic;"><{$quotepage.reference}></div></p>
+	</td>
+</tr>
+<tr>
+	<td><p><span style="font-size: 9px; color: #778899;"><{$lang_publish}>: </b><{$quotepage.poster}> :: <{$lang_posted}>: </b><{$quotepage.datesub}> :: <{$lang_read}>: </b><{$quotepage.counter}>&nbsp;<{$lang_times}></span></p></td>
+</tr>
+</table>
+<br>
+<table border="0" width="100%" cellspacing="1" cellpadding="2">
+  <tr> 
+    <td> 
+      <div align="left"><{$quotepage.catlink}></div>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td align="center" class = 'even'> <{$quotepage.rating}><{$quotepage.votes}><br>
+      <{$quotepage.ratequote}></td>
+  </tr>
+  <tr> 
+    <td> 
+      <div style="text-align: center; padding: 3px;
+	margin:3px;"> <{$commentsnav}> <{$lang_notice}> </div>
+      <div style="margin:3px; padding: 3px;"> 
+        <!-- start comments loop -->
+        <{if $comment_mode == "flat"}> <{include file="db:system_comments_flat.html"}> 
+        <{elseif $comment_mode == "thread"}> <{include file="db:system_comments_thread.html"}> 
+        <{elseif $comment_mode == "nest"}> <{include file="db:system_comments_nest.html"}> 
+        <{/if}> 
+        <!-- end comments loop -->
+      </div>
+    </td>
+  </tr>
+</table>
